@@ -1,34 +1,33 @@
 import React from "react";
+import profileImage from '../../assets/profile-image.png';
+import { ElementId } from "../../constants";
 
 export const AboutMe: React.FC = () => {
 
     return (
-        <div className="w-full sm:w-1/2 px-5 sm:px-0 pt-10">
-            <div className="pb-6">
-                <hr className="text-softGrey border-softGrey roundend-sm"/>
-            </div>
-            <div className="flex flex-col text-white font-mono text-left">
-                <div className="grid gap-3">
-                    <div>
-                        <p className="font-bold text-2xl">
-                            About Me 
-                        </p>
-                    </div>
-                    <div>
-                        <p className="font-extralight text-base text-softGrey">
-                            I'm a Software Developer/Front End Engineer with over 11 years of experience in software development. 
-                            I have worked on web, mobile, and desktop applications, but my primary focus has always been web development, specializing in frontend technologies to create high-performance, user-friendly interfaces.
-                        </p>
-                    </div>
-                    <div>
-                        <p className="font-extralight text-base text-softGrey">
-                            Currently, I work at one of Japan's largest e-commerce platforms, 
-                            where I play a key role in rebuilding the checkout system to enhance its functionality, 
-                            implement new features, and resolve existing issues.
-                        </p>
-                    </div>
+        <div id={ElementId.aboutMe} className="md:min-h-screen pb-48 md:pb-0 bg-white pt-24 lg:pt-32 px-24 md:px-64 lg:px-72 xl:px-100">
+            <p className="font-bold text-4xl place-self-center">
+                About Me 
+            </p>
+            <div className="flex flex-col lg:flex-row pt-20">
+                <div className="order-2 lg:order-1 text-[#1E293B] text-wrap">
+                    <p className="text-2xl font-black"> 
+                        Jason Amasola Ampalayohan
+                    </p>
+                    <p className="pt-1 font-extralight text-[#1E293B] font-semibold">
+                        Front-end Engineer | Full-stack Developer
+                    </p>
+                    <p className="pt-2 font-extralight text-base text-softGrey">
+                        I have 11 years of experience, specializing in front-end development with React and TypeScript. 
+                        I’ve worked across web, mobile, and desktop applications, 
+                        but my main focus has always been building high-performance, user-friendly web solutions.
+                        <br/><br/>
+                        Based in Tokyo, Japan, I’m currently seeking new opportunities to contribute to innovative web projects as a front-end/full-stack developer.
+                    </p>
                 </div>
-                
+                <div className="order-1 lg:order-2 w-auto lg:w-180 place-self-center mb-4">
+                    <img src={profileImage} className="size-56 object-cover rounded-full border-2"/>
+                </div>
             </div>
         </div>
     )

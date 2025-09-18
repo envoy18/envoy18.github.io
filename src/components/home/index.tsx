@@ -1,5 +1,5 @@
 import React from "react";
-
+import { ElementId } from "../../constants";
 //import { useInView } from 'react-intersection-observer';
 
 export const Home: React.FC = () => {
@@ -8,19 +8,17 @@ export const Home: React.FC = () => {
     // });
 
     return (
-        <div className={`w-full sm:w-1/2 pt-20 px-10 sm:px-0`}>
-            <div className="flex flex-col text-white font-mono text-left">
-                <div>
-                    <p className="text-3xl font-black"> 
-                        Jason Ampalayohan
-                    </p>
-                    <p className="pt-1 font-extralight text-base font-semibold">
-                        Software Developer | Front End Engineer
-                    </p>
-                    <p className="pt-3 font-extralight text-base text-softGrey">
-                        Extensive experience in software development, with a focus on web applications.
-                    </p>
-                </div>
+        <div id={ElementId.home} className="min-h-full px-48 pt-80">
+            <div className="place-self-center text-[#1E293B] text-wrap">
+                <p className="text-5xl font-black"> 
+                    Jason Amasola Ampalayohan
+                </p>
+                <p className="pt-1 font-extralight text-[#1E293B] font-semibold">
+                    Front-end Engineer | Full-stack Developer
+                </p>
+                <p className="font-extralight text-base text-softGrey italic">
+                    Experienced in delivering high-performance, user-friendly web solutions.
+                </p>
             </div>
         </div>
     )

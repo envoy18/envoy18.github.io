@@ -15,7 +15,7 @@ export const workExperience = [
             "Reviewed code and specifications to ensure quality and compliance with requirements.",
             "Supported deployments to ensure smooth and reliable release."
         ],
-        techStack: ["Typescript", "React", "Redux"],
+        techStack: "Typescript, React, Redux",
         recent: true
     },
     {
@@ -27,7 +27,7 @@ export const workExperience = [
             "Developed back-end APIs with Express to support front-end functionality.",
             "Collaborated with the team to maintain and improve the shared development library."
         ],
-        techStack: ["Node.js", "Express", "React", "Typescript", "Docker"]
+        techStack: "Node.js, Express, React, Typescript, Docker"
     },
     {
         company: "Technopro Engineering",
@@ -37,7 +37,7 @@ export const workExperience = [
             "Implemented localization and enhanced existing mobile applications through refactoring, debugging, and issue resolution; additionally developed a hybrid mobile app integrating GPS-based user location tracking.", 
             "Improved UI performance through frontend component refactoring and delivered new features aligned with client requirements.",
         ],
-        techStack: ["Node.js", "Express", "React", "Typescript", "Docker"]
+        techStack: "Node.js, Express, React, Typescript, Docker"
     },
     {
         company: "Emerio, Philippines",
@@ -48,7 +48,7 @@ export const workExperience = [
             "Performed unit testing to validate functionality and improve application performance.",
             "Reviewed pull requests and managed Git branches to uphold code quality and ensure effective version control."
         ],
-        techStack: ["C#", "MSSQL Lite", ".NET Core"]
+        techStack: "C#, MSSQL Lite, .NET Core"
     },
     {
         company: "Collabera, Philippines",
@@ -58,7 +58,7 @@ export const workExperience = [
             "Developed ordering and table management feature.", 
             "Supported team members in development a web application using MVC.NET and JavaScript.",
         ],
-        techStack: ["C#", "MSSQL Lite", ".NET Core", "JavaScript"]
+        techStack: "C#, MSSQL Lite, .NET Core, JavaScript"
     },
     {
         company: "Yokogawa Techno-Philippines, Philippines",
@@ -70,7 +70,7 @@ export const workExperience = [
             "Tested and enhanced customer web applications while developing in-house solutions, including a leave filing system and a biometric data retrieval application.",
             "Provided technical support and troubleshooting to resolve employee issues."
         ],
-        techStack: ["VB.NET", "Monaca Framework", "ASP.NET", "JavaScript", "AngularJS", "Postgresql"]
+        techStack: "VB.NET, Monaca Framework, ASP.NET, JavaScript, AngularJS, Postgresql"
     },
     {
         company: "Harbour Centre Port Terminal Inc., Philippines",
@@ -80,6 +80,6 @@ export const workExperience = [
             "Implemented web applications in an in-house environment, upgrading and deploying patches to existing systems.", 
             "Developed prototypes and actively participated in client meetings to support solution design.",
         ],
-        techStack: ["JavaScript", "JQuery", ".NET Web-service(ASMX)", "MSSQL"]
+        techStack: "JavaScript, JQuery, .NET Web-service(ASMX), MSSQL"
     }
 ]

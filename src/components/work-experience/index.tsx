@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
@@ -8,9 +8,17 @@ import { WorkExperienceContent } from "./sub-components/work-exp-content";
 import { ElementId, workExperience } from "../../constants";
 
 export const WorkExperience: React.FC = () => {
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => setIsMobile(window.innerWidth < 768);
+        handleResize(); // set initially
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
 
     return (
-        <div id={ElementId.workExperience} className="px-32 pt-12">
+        <div id={ElementId.workExperience} className="relative px-2 md:px-32 pt-12">
             <div className="place-self-left text-[#1F2937] text-wrap m-3">
                 <p className="font-bold text-4xl place-self-center">
                     Work Experience
@@ -18,6 +26,7 @@ export const WorkExperience: React.FC = () => {
                 <div className="grid gap-3 p-4">
                     <VerticalTimeline
                         lineColor='#1E293B'
+                        layout={isMobile ? "1-column" : "2-columns"}
                     >
                         {workExperience.map((exp, index) => {
                             return (

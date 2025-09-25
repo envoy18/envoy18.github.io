@@ -11,8 +11,8 @@ export const Nav: React.FC = () => {
 
     return (
         <div className="w-screen min-h-16 fixed top-0 bg-[#1E1E1E] z-10">
-            <div className="px-6 py-5 text-white flex justify-between items-center place-self-center">
-                <ul className="flex gap-6 md:gap-16">
+            <div className="px-6 py-5 text-white justify-between text-center">
+                <ul className="flex gap-6 md:gap-16 place-self-center">
                     <li className="hover:text-cyan-400 cursor-pointer"
                         onClick={() => scrollIntoDiv(ElementId.home)}
                     >
@@ -21,12 +21,12 @@ export const Nav: React.FC = () => {
                     <li className="hover:text-cyan-400 cursor-pointer"
                         onClick={() => scrollIntoDiv(ElementId.aboutMe)}
                     >
-                        About Me
+                        About
                     </li>
                     <li className="hover:text-cyan-400 cursor-pointer"
                         onClick={() => scrollIntoDiv(ElementId.workExperience)}
                     >
-                        Work Experience
+                        Work
                     </li>
                     <li className="hover:text-cyan-400 cursor-pointer"
                         onClick={() => scrollIntoDiv(ElementId.contact)}

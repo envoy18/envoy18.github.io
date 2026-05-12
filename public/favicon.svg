@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Jason Ampalayohan portfolio icon</title>
+  <desc id="desc">A navy portfolio icon with the initials JA.</desc>
+  <rect width="64" height="64" rx="16" fill="#061a38"/>
+  <path d="M18 24.5c0-2.5 2-4.5 4.5-4.5h19c2.5 0 4.5 2 4.5 4.5V28h-5v-3H23v3h-5v-3.5Z" fill="#64b5f6"/>
+  <path d="M15 29h34v16.5c0 2.5-2 4.5-4.5 4.5h-25c-2.5 0-4.5-2-4.5-4.5V29Z" fill="#f7fbff"/>
+  <path d="M24 35h5v7.5c0 3.6-2.1 5.9-5.8 5.9-1.8 0-3.4-.5-4.7-1.6l1.9-3.4c.8.6 1.5.9 2.4.9.8 0 1.2-.5 1.2-1.8V35Zm9.1 0h4.8l5.4 13h-5.2l-.6-1.7h-4.3l-.6 1.7h-5l5.5-13Zm1.1 8h2.2l-1.1-3.2-1.1 3.2Z" fill="#061a38"/>
+</svg>

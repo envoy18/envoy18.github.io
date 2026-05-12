@@ -1,54 +1,39 @@
-import React, { useEffect, useState } from "react";
-
-import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
-import 'react-vertical-timeline-component/style.min.css';
-import { MdWork } from "react-icons/md";
+import React from "react";
 
 import { WorkExperienceContent } from "./sub-components/work-exp-content";
 import { ElementId, workExperience } from "../../constants";
 
 export const WorkExperience: React.FC = () => {
-    const [isMobile, setIsMobile] = useState(false);
-
-    useEffect(() => {
-        const handleResize = () => setIsMobile(window.innerWidth < 768);
-        handleResize(); // set initially
-        window.addEventListener("resize", handleResize);
-        return () => window.removeEventListener("resize", handleResize);
-    }, []);
-
     return (
-        <div id={ElementId.workExperience} className="relative px-2 md:px-32 pt-12">
-            <div className="place-self-left text-[#1F2937] text-wrap m-3">
-                <p className="font-bold text-4xl place-self-center">
-                    Work Experience
-                </p>
-                <div className="grid gap-3 p-4">
-                    <VerticalTimeline
-                        lineColor='#1E293B'
-                        layout={isMobile ? "1-column" : "2-columns"}
-                    >
-                        {workExperience.map((exp, index) => {
-                            return (
-                                <VerticalTimelineElement
-                                    key={index}
-                                    date={exp.year}
-                                    iconClassName={exp.recent ? "bg-[#0EA5E9]" : "bg-white"} 
-                                    icon={<MdWork className={exp.recent ? "text-white" : ""} />}
-                                >
-                                    <WorkExperienceContent
-                                        key={index}
-                                        company={exp.company} 
-                                        role={exp.role} 
-                                        content={exp.content} 
-                                        techStack={exp.techStack}                                        
-                                    />
-                                </VerticalTimelineElement>
-                            )
-                        })}
-                    </VerticalTimeline>
+        <section id={ElementId.workExperience} className="scroll-mt-24 bg-[#06142a] px-5 py-20 text-white md:px-8 md:py-28">
+            <div className="mx-auto max-w-7xl">
+                <div data-reveal className="reveal mb-12 max-w-5xl">
+                    <p className="text-sm font-black uppercase tracking-[0.22em] text-[#7cc7ff]">
+                        Experience
+                    </p>
+                    <h2 className="mt-4 text-4xl font-black leading-tight md:text-6xl">
+                        Built across startups, enterprise teams, and internal platforms.
+                    </h2>
+                    <p className="mt-6 max-w-3xl text-lg leading-8 text-[#c7d7e8]">
+                        A career path through frontend, full-stack, .NET, mobile, and legacy modernization work, with the last several years centered on React and TypeScript.
+                    </p>
+                </div>
+
+                <div className="grid gap-5">
+                    {workExperience.map((exp, index) => (
+                        <WorkExperienceContent
+                            key={`${exp.company}-${exp.year}`}
+                            index={index}
+                            company={exp.company}
+                            year={exp.year}
+                            role={exp.role}
+                            content={exp.content}
+                            techStack={exp.techStack}
+                            recent={exp.recent}
+                        />
+                    ))}
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
